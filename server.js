@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Connection to Database
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDB", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
 //Listener
 app.listen(PORT, () => {
