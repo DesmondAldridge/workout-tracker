@@ -43,7 +43,7 @@ const workoutSchema = new Schema({
   ],
 });
 
-//Storing the model in a variable to export
+//Storing model in a variable to export
 const Workout = mongoose.model("Workout", workoutSchema);
 
 //Exports
