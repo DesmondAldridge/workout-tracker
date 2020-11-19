@@ -20,7 +20,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Connection to Database
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+});
 
 //Listener
 app.listen(PORT, () => {
